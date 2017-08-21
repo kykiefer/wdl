@@ -6,7 +6,7 @@ We often design hydraulic fracturing treatments around historical success. We lo
 2. The emergence of open-source tools (like [Python](https://www.python.org/) and [R](https://www.r-project.org/)) to the forefront of data science and machine learning has leveled the playing field for advanced analytics among startups and supermajors alike.
 
 ### Machine Learning — What’s the hype about?
-Machine learning and artificial intelligence (AI) have stirred quite a bit of commotion lately, with mainstream news articles referencing Facebook’s chatbot AI being shut down for “[creating its own language](https://www.theatlantic.com/technology/archive/2017/06/artificial-intelligence-develops-its-own-non-human-language/530436/)” and [Elon Musk urging  the to ban UN to ban AI weapons](https://www.theguardian.com/technology/2017/aug/20/elon-musk-killer-robots-experts-outright-ban-lethal-autonomous-weapons-war) to be proactive in controlling AI development.
+Machine learning and artificial intelligence (AI) have stirred quite a bit of commotion lately, with mainstream news articles referencing Facebook’s chatbot AI being shut down for “[creating its own language](https://www.theatlantic.com/technology/archive/2017/06/artificial-intelligence-develops-its-own-non-human-language/530436/)” and [Elon Musk urging  the to ban UN to ban AI weapons](https://www.theguardian.com/technology/2017/aug/20/elon-musk-killer-robots-experts-outright-ban-lethal-autonomous-weapons-war).
 
 We’re in an era where the data being collected is allowing engineers to perform machine learning algorithms that learn patterns in data at scale in ways humans can't fathom (e.g. processing 100+ million rows of data, synthesizing data in more than 3 dimensions, combining variables non-linearly). [Robots have been taught to cook](https://www.youtube.com/watch?v=MLJyUmuP6Qg) by watching YouTube and computer vision models can now [diagnose the recurrence of brain cancer](http://neurosciencenews.com/ai-brain-cancer-neurology-5058/) in ways that physicians cannot. So it doesn't seem outrageous that we could generate novel, low-cost frac treatments that have high production potential or use frac van time series data to find pressure patterns that indicate a potential screen out before a seasoned engineer or treater may be able to.
 
@@ -18,8 +18,7 @@ The realm of machine learning in oil & gas isn't limited to production optimizat
 Data science is moving the oil & gas industry from being reactive to proactive. But here's the catch -- we need people with oil & gas domain expertise building these algorithms! The oilfield is a complex and nuanced place and building predictive models and developing meaningful statistics is difficult with domain experience. Tools like Tableau will take you far, but if you're looking to elevate your skillset,  programming is a requirement. Python and R are and the languages of data science and machine learning.
 
 ### How to get started with data analytics using Python?
-Python is programming language. Within Python, are something called [modules](https://docs.python.org/2/tutorial/modules.html). Modules are a composed of code someone has written to make your life easier. For the Excel users out there, imagine having to write a VLOOKUP function with VBA code every time you wanted it’s functionality. Modules make it easy to perform common tasks in a few lines of code and are optimized for computation speed.
-Below I write code in Python by interacting with two modules — pandas and seaborn. [Pandas](http://pandas.pydata.org/) is an Excel-like module for big data and enhanced manipulation. [Seaborn](https://seaborn.pydata.org/) is a tool for creating beautiful charts and visuals. If you gain comfort with Python and these modules, machine learning is not far away (look to a module called [scikit-learn](http://scikit-learn.org/stable/) and [this tutorial](http://scikit-learn.org/stable/tutorial/basic/tutorial.html) to get started).
+Python is programming language. Within Python, are something called [modules](https://docs.python.org/2/tutorial/modules.html). Modules are a composed of code someone has written to make your life easier. For the Excel users out there, imagine having to write a VLOOKUP function with VBA code every time you wanted it’s functionality. Modules make it easy to perform common tasks in a few lines of code and are optimized for computation speed. One can leverage modules, like [Pandas](http://pandas.pydata.org/) and [scikit-learn](http://scikit-learn.org/stable/), to get started with data analysis and machine learning very quickly.
 
 Using frac stage data extracted from Well Data Labs, in just a few lines of code we can look at the at the distribution of sand volumes pumped in gel-based treatments across formations (Niobrara, Codell, Wolfcamp). Click [here](code_snippet.md) to see the code!
 
@@ -33,7 +32,7 @@ Here's a compelling visual why going beyond box plots may is a good idea.
 
 <img alt="violin plot" src="img/BoxViolinSmaller.gif" width='775'>
 
-<sup>Figure 1: Seven distributions of data, shown as raw data points (or strip-plots), as box-plots, and as violin-plots. [Source](https://www.autodeskresearch.com/publications/samestats).<sup>
+<sup>Figure 1: Seven distributions of data, shown as raw data points (or strip plots), as box plots, and as violin plots. [Source](https://www.autodeskresearch.com/publications/samestats).<sup>
 
 
 ### Wrapping it Up
