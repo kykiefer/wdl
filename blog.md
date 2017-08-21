@@ -19,53 +19,24 @@ Data science is moving the oil & gas industry from being reactive to proactive. 
 
 ### How to get started with data analytics using Python?
 Python is programming language. Within Python, are something called [modules](https://docs.python.org/2/tutorial/modules.html). Modules are a composed of code someone has written to make your life easier. For the Excel users out there, imagine having to write a VLOOKUP function with VBA code every time you wanted it’s functionality. Modules make it easy to perform common tasks in a few lines of code and are optimized for computation speed.
-Below I write code in Python by interacting with two modules — pandas and seaborn. [Pandas](http://pandas.pydata.org/) is an Excel-like module for big data and enhanced manipulation. [Seaborn](https://seaborn.pydata.org/) is a tool for creating beautiful charts and visuals. If you gain comfort with Python and these modules, machine learning is not far away (look to a module called [scikit-learn](http://scikit-learn.org/stable/) and [this tutorial](http://scikit-learn.org/stable/tutorial/basic/tutorial.html) to get started). Resources to help you get set-up with Python can be found in the **Resources** section below.
+Below I write code in Python by interacting with two modules — pandas and seaborn. [Pandas](http://pandas.pydata.org/) is an Excel-like module for big data and enhanced manipulation. [Seaborn](https://seaborn.pydata.org/) is a tool for creating beautiful charts and visuals. If you gain comfort with Python and these modules, machine learning is not far away (look to a module called [scikit-learn](http://scikit-learn.org/stable/) and [this tutorial](http://scikit-learn.org/stable/tutorial/basic/tutorial.html) to get started).
 
-Using frac stage data extracted from Well Data Labs, in just a few lines of code I’m able to look at the at the distribution of sand volumes pumped in gel-based treatments across formations. Click [here](code_snippet.md) to see the code!
+Using frac stage data extracted from Well Data Labs, in just a few lines of code we can look at the at the distribution of sand volumes pumped in gel-based treatments across formations (Niobrara, Codell, Wolfcamp). Click [here](code_snippet.md) to see the code!
 
-```python
-# import helpful modules
-import pandas as pd # pd is an alias we can reference to call pandas in our code
-import seaborn as sns
+<img alt="violin plot" src="img/box_plot.png" width='775'>
 
-# load the Excel file
-xlsx = pd.ExcelFile('FracStats_JobList_Summer2017.xlsx')
-# load the selected tab from the Excel workbook into a pandas dataframe
-df_frac = xlsx.parse('FracStats')
-
-# print the first five rows of the data frame
-print(df_frac.head())
-```
-
-<img alt="dataframe" src="img/df2.png" width='775'>
-
-```python
-# narrow down to stages treated with 'Gel' and not  screened out
-df_gel = df_frac.loc[(df_frac['Fluid Type'] == 'Gel') & (df_frac['Screen Out'] == 'No')]
-
-print("{} stages across {} wells.".format(df_gel.shape[0], len(df_gel['Well'].unique())))
-```
-
-`590 stages across 22 wells.`
-
-Let's visualize the distribution of proppant pumped in these stages by formation (Niobrara, Codell, Wolfrcamp).
-
-You may be familiar with [box plots](http://www.physics.csbsju.edu/stats/box2.html) (also called box-and-whisker plots). [Violin plots](http://www.datavizcatalogue.com/methods/violin_plot.html) present a distribution in greater detail and allow you took look at details.
-
-```python
-# plot the distribution of total sand pumped by formation in a violin plot.
-sns.violinplot(data=df_gel, x="Formation", y="Total Proppant [lbs].1")
-```
+You may be familiar with [box plots](http://www.physics.csbsju.edu/stats/box2.html) (also called box-and-whisker plots) in visualizing a distribution. [Violin plots](http://www.datavizcatalogue.com/methods/violin_plot.html) present a distribution in greater detail and allow you took look at details.
 
 <img alt="violin plot" src="img/example.png" width='775'>
+
+Here's a compelling visual why going beyond box plots may is a good idea.
+
+<img alt="violin plot" src="img/BoxViolinSmaller.gif" width='775'>
+
+<sup>Figure 1: Seven distributions of data, shown as raw data points (or strip-plots), as box-plots, and as violin-plots. [Source](https://www.autodeskresearch.com/publications/samestats).<sup>
+
 
 ### Wrapping it Up
 The barrier of entry to advanced analytics has never been lower. You can use the same analytics tools that are literally used by leading researchers around the world. The amount of data that oil & gas companies collect and high-stakes decisions make the industry one of the most exciting for data science and machine learning.
 
-What tools are you using for data analysis? Try to replicate analysis you’ve done using Python and share your data explorations with the Well Data Labs team at @twitter(?). Some additional resources to getting started with Python can be found below.
-
-
-### Resources
-* D
-* Get data s
-*
+What tools are you using for data analysis? Try to replicate analysis you’ve done using Python and share your data explorations with the  team at [@WelLDataLabs](https://twitter.com/welldatalabs).
